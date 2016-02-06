@@ -2,12 +2,15 @@ var path = require('path');
 var webpack = require('webpack');
 
 module.exports = {
-  entry: './js/app.js',
+  entry: './src/app.js',
   output: {
     path: path.resolve(__dirname, 'build'),
-    filename: 'main.bundle.js'
+    filename: 'bundle.js'
   },
   module: {
+    preLoaders: [
+      {test: /\.js$/, loader: "eslint-loader", exclude: /node_modules/}
+    ],
     loaders: [
       {
         test: /\.js$/,
@@ -21,5 +24,5 @@ module.exports = {
   stats: {
     colors: true
   },
-  devtool: 'source-map'
+  watch: true
 };

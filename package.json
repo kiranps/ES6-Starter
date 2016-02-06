@@ -3,16 +3,22 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-      "babel": "babel --presets es2015 js/main.js -o build/main.bundle.js",
-      "webpack": "webpack"
+    "babel": "babel --presets es2015 js/main.js -o build/bundle.js",
+    "webpack": "webpack",
+    "webpack-dev-server": "webpack-dev-server --content-base src/app.js"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "babel-cli": "^6.4.5",
     "babel-core": "^6.4.5",
+    "babel-eslint": "^4.1.8",
     "babel-loader": "^6.2.1",
     "babel-preset-es2015": "^6.3.13",
-    "webpack": "^1.12.12"
+    "eslint": "^1.10.3",
+    "eslint-config-google": "^0.3.0",
+    "eslint-loader": "^1.2.1",
+    "webpack": "^1.12.12",
+    "webpack-dev-server": "^1.14.1"
   }
 }
